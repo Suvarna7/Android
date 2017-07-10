@@ -3,6 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
     defaultConfig {
         applicationId "com.example.suvarna.helloworld"
         minSdkVersion 15
@@ -10,11 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        aaptOptions.cruncherEnabled = false
-        aaptOptions.useNewCruncher = false
-
-
-    }
+        }
     buildTypes {
         release {
             minifyEnabled false
